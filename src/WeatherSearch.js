@@ -27,6 +27,18 @@ export default function WeatherSearch() {
     e.preventDefault();
     axios.get(apiUrl).then(getWeather);
   }
+  function showPosition(position) {
+    let latitude = position.coords.latitude;
+    let longitude = position.coords.longitude;
+    let units = "metric";
+    let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather?";
+    let apiKey = "c77c1ca17d20c46264d7b3958f6293e6";
+    let apiUrl = `${apiEndpoint}lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+    axios.get(apiUrl).then(getWeather);
+  }
+  function getCurrentPosition() {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  }
   if (weather) {
     return (
       <div className="WeatherSearch">
@@ -49,7 +61,11 @@ export default function WeatherSearch() {
           </form>
         </div>
         <div className="d-flex justify-content-end pe-3">
-          <button value="locate" className="searchButton" id="locate-me">
+          <button
+            value="locate"
+            className="searchButton"
+            onClick={getCurrentPosition}
+          >
             Use current location
           </button>
         </div>
