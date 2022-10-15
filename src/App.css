@@ -23,7 +23,7 @@ ul {
   .App {
     margin: 0 auto;
     border-radius: 0px;
-    height: 100vh;
+    height: 100%;
   }
 
   .forecast {
