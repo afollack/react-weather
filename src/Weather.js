@@ -5,12 +5,12 @@ import Forecast from "./Forecast";
 import "./Weather.css";
 
 export default function WeatherSearch() {
-  const [city, setCity] = useState("New York");
-  const [weather, setWeather] = useState(false);
+  let [city, setCity] = useState("New York");
+  let [weather, setWeather] = useState(false);
   const apiKey = "c77c1ca17d20c46264d7b3958f6293e6";
   const units = "metric";
-  const apiEndpoint = "https://api.openweathermap.org/data/2.5/weather?";
-  let apiUrl = `${apiEndpoint}q=${city}&appid=${apiKey}&units=${units}`;
+  let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather?";
+  const apiUrl = `${apiEndpoint}q=${city}&appid=${apiKey}&units=${units}`;
 
   function getCity(e) {
     setCity(e.target.value);

@@ -46,15 +46,6 @@
   font-size: 1.25em;
 }
 
-.forecastMax {
-  font-weight: 600;
-  color: #48484a;
-}
-
-.forecast .card-text {
-  font-size: 1em;
-}
-
 @media only screen and (max-width: 670px) {
   .todaysWeather {
     display: flex;

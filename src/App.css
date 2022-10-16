@@ -38,9 +38,4 @@ p {
     border-radius: 0px;
     height: 100%;
   }
-
-  .forecast {
-    width: 90%;
-    display: flex;
-  }
 }
