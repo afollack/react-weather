@@ -4,21 +4,19 @@ import WeatherData from "./WeatherData";
 import Forecast from "./Forecast";
 import "./Weather.css";
 
-export default function WeatherSearch() {
-  let [city, setCity] = useState("New York");
+export default function Weather() {
+  let [city, setCity] = useState("");
   let [weather, setWeather] = useState(false);
-  const apiKey = "c77c1ca17d20c46264d7b3958f6293e6";
-  const units = "metric";
-  let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather?";
-  const apiUrl = `${apiEndpoint}q=${city}&appid=${apiKey}&units=${units}`;
+  const apiKey = "bc5ca568ee2d7c71357ca430a3ff8705";
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
   function getCity(e) {
     setCity(e.target.value);
   }
   function getWeather(response) {
     setWeather({
-      coordinates: response.data.coord,
       city: response.data.name,
+      coordinates: response.data.coord,
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
       date: new Date(response.data.dt * 1000),
@@ -34,6 +32,8 @@ export default function WeatherSearch() {
   function showPosition(position) {
     let latitude = position.coords.latitude;
     let longitude = position.coords.longitude;
+    let units = "metric";
+    let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather?";
     let apiUrl = `${apiEndpoint}lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
     axios.get(apiUrl).then(getWeather);
   }
@@ -75,6 +75,9 @@ export default function WeatherSearch() {
       </div>
     );
   } else {
+    const apiKey = "bc5ca568ee2d7c71357ca430a3ff8705";
+    let city = "New York";
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(getWeather);
     return "Loading";
   }

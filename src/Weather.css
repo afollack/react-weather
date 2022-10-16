@@ -46,7 +46,7 @@
   font-size: 1.25em;
 }
 
-@media only screen and (max-width: 670px) {
+@media only screen and (max-width: 550px) {
   .todaysWeather {
     display: flex;
     flex-direction: column-reverse;

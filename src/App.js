@@ -7,9 +7,9 @@ function App() {
   return (
     <div className="App">
       <div className="container-fluid">
-        <Weather />
+        <Weather defaultCity="New York" />
+        <Footer />
       </div>
-      <Footer />            
     </div>
   );
 }

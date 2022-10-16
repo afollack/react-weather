@@ -3,9 +3,9 @@ import UpdateDate from "./UpdateDate";
 import WeatherIcon from "./WeatherIcon";
 import Temperature from "./Temperature";
 
-export default function Weather(props) {
+export default function WeatherData(props) {
   return (
-    <div className="Weather">
+    <div className="WeatherData">
       <div className="todaysWeather row d-flex justify-content-around align-items-center m-auto p-2">
         <div className="currentWeather col-6 card border-0 p-1 shadow">
           <div className="card-body">

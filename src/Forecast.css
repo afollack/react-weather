@@ -3,8 +3,18 @@
   color: #48484a;
 }
 
-@media only screen and (max-width: 670px) {
+.Forecast .card-text {
+  font-size: 1em;
+}
+
+@media only screen and (max-width: 550px) {
+  .Forecast {
+    display: flex;
+    flex-direction: column;
+  }
+
   .Forecast .card {
     width: 80%;
+    align-self: center;
   }
 }

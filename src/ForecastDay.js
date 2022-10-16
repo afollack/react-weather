@@ -19,7 +19,7 @@ export default function ForecastDay(props) {
   }
 
   return (
-    <div className="card col-2 text-center shadow border-0 m-2 p-1">
+    <div className="ForecastDay">
       <WeatherIcon code={props.data.weather[0].icon} width={65} />
       <div className="card-body">
         <h5 className="card-title">{day()}</h5>
