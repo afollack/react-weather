@@ -1,0 +1,10 @@
+.forecastMax {
+  font-weight: 600;
+  color: #48484a;
+}
+
+@media only screen and (max-width: 670px) {
+  .Forecast .card {
+    width: 80%;
+  }
+}

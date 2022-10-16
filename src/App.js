@@ -1,4 +1,4 @@
-import WeatherSearch from "./WeatherSearch";
+import Weather from "./Weather";
 
 import "./App.css";
 
@@ -6,30 +6,22 @@ function App() {
   return (
     <div className="App">
       <div className="container-fluid">
-        <WeatherSearch />
+        <Weather />
       </div>
-      <div className="footer">
-        <small>
-          WEATHER APP{" "}
-          <span role="img" aria-label="two hearts emoji">
-            💕
-          </span>{" "}
-          Coded by Andrea Follack
-        </small>
-        <br />
+      <div className="footer pt-2 d-flex justify-content-end">
         <a
           href="https://github.com/afollack/weather-app-js-shecodes"
           target="_blank"
           rel="noreferrer"
         >
-          <i className="bi bi-github"></i>
+          <i className="bi bi-github ps-1"></i>
         </a>
         <a
           href="https://www.linkedin.com/in/andreafollack/"
           target="_blank"
           rel="noreferrer"
         >
-          <i className="bi bi-linkedin"></i>
+          <i className="bi bi-linkedin p-1"></i>
         </a>
       </div>
     </div>
