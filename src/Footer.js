@@ -2,13 +2,13 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div className="footer pt-2 d-flex justify-content-end">
+    <div className="footer d-flex justify-content-end pt-2 pb-1">
       <a
-        href="https://github.com/afollack/weather-app-js-shecodes"
+        href="https://github.com/afollack/react-weather"
         target="_blank"
         rel="noreferrer"
       >
-        <i className="bi bi-github ps-1"></i>
+        <i className="bi bi-github"></i>
       </a>
       <a
         href="https://www.linkedin.com/in/andreafollack/"
