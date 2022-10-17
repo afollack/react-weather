@@ -6,8 +6,8 @@ import Temperature from "./Temperature";
 export default function WeatherData(props) {
   return (
     <div className="WeatherData">
-      <div className="todaysWeather row d-flex justify-content-around align-items-center m-auto p-2">
-        <div className="currentWeather col-6 card border-0 p-1 shadow">
+      <div className="todaysWeather row d-flex justify-content-between align-items-center m-auto p-3">
+        <div className="currentWeather col-sm-6 col-8 card border-0 p-1 shadow">
           <div className="card-body">
             <h5 className="city card-title">{props.data.city}</h5>
             <UpdateDate date={props.data.date} />

@@ -5,9 +5,9 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App shadow">
       <div className="container-fluid">
-        <Weather defaultCity="New York" />
+        <Weather />
         <Footer />
       </div>
     </div>

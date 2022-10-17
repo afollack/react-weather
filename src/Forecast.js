@@ -32,7 +32,7 @@ export default function WeatherForecast(props) {
           if (index >= 1 && index < 6) {
             return (
               <div
-                className="card col-2 text-center shadow border-0 m-2 p-1"
+                className="card col-sm col-4 text-center shadow border-0 m-2 p-1"
                 key={index}
               >
                 <ForecastDay data={dailyForecast} />
